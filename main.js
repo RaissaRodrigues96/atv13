@@ -13,10 +13,20 @@ function comecaArrastar(evento){
 
 function recebeAlgo(evento){
      if(arrastado&& evento.target.classList.add.constains('casa')){
+        const posDisco = arrastado.dataset.posicao;
+        const posCasa = evento.target.dataset.posicao;
+        console.log('tentar mover o disco de $(posDisco) para $(posCasa)')};
+        if (mover(posDisco.posCasa)){
+            console.log('disco foi de $(posDisco) para $(posCasa)');
+        };
+
         evento.target.appendChild(arrastado);
+        arrastado.dataset.posicao = posCasa;
         arrastado = null;
-     }
-}
+     } else{
+        console.log('Não pode mover o de $(posDisco) para $(posCasa)')};
+     
+
 function passouPorCima(evento){
     evento.preventDefault()
 }

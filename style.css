@@ -12,7 +12,7 @@ body{
     margin: 0 auto;
 }
 .tabuleiro{
-    background-color: aquamarine;
+    background-color: black;
     padding: 10px;
     display: flex;
     gap: 5px;
