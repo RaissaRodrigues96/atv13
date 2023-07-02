@@ -12,15 +12,15 @@ body{
     margin: 0 auto;
 }
 .tabuleiro{
-    background-color: black;
-    padding: 10px;
+    background-color: orange;
+    padding: 80px;
     display: flex;
-    gap: 5px;
-    max-width:  500px;
-    width: 100vw;
+    gap: 10px;
+    max-width:  800px;
+    width: 500vw;
 }
 .casa{
-    background-color: bisque;
+    background-color: maroon;
     width: 70px;
     height: 70px;
     display: flex;
@@ -32,9 +32,9 @@ body{
     border: 5% solid white;
     height: 50%;
     aspect-ratio:  1;
-    border-radius: 50px;
+    border-radius: 100px;
 }
 .disco.branco{
     background-color:white;
-    border: 4px solid black;
+    border: 6px solid black;
 }
