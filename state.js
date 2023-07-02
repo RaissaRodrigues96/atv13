@@ -5,16 +5,16 @@ export function getTabuleiro(){
 }
 
 export function mover(de , para){
-    if (Math.abs(para = de) == 3){
+    if (Math.abs(para - de) === 3){
 
         return false;
     }
 
-    if(tabuleiro(para) == null){
+    if(tabuleiro[para] === null){
         return false;
     }
 
-    tabuleiro [para] = tabuleiro [de];
+    tabuleiro[para] = tabuleiro[de];
     tabuleiro[de] = null;
     return true;
 }

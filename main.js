@@ -12,7 +12,7 @@ function comecaArrastar(evento){
 }
 
 function recebeAlgo(evento){
-     if(arrastado&& evento.target.classList.add.constains('casa')){
+     if (arrastado && evento.target.classList.constains('casa')){
         const posDisco = arrastado.dataset.posicao;
         const posCasa = evento.target.dataset.posicao;
         console.log('tentar mover o disco de $(posDisco) para $(posCasa)')};
@@ -25,10 +25,14 @@ function recebeAlgo(evento){
         arrastado = null;
      } else{
         console.log('Não pode mover o de $(posDisco) para $(posCasa)')};
+
+        function passouPorCima(evento) {
+            evento.preventDefault();
+          }
      
 
 function passouPorCima(evento){
-    evento.preventDefault()
+    evento.preventDefault();
 }
  
 function setup(){
@@ -41,25 +45,25 @@ function setup(){
     }
 }
 
-function criaCasa(casa){
+function criaCasa(casa,k){
     const eCasa = document.createElement('div');
     eCasa.dataset.posicao = k;
     eCasa.classList.add('casa');
-    eCasa.addEventListener('drapover',passouPorCima);
-    eCasa.addEventListener('drap',recebeAlgo);
+    eCasa.addEventListener('dragover',passouPorCima);
+    eCasa.addEventListener('drop',recebeAlgo);
     if(casa != null){
-        const eDisco = criarDisco(casa);
+        const eDisco = criarDisco(casa,K);
         eCasa.appendChild(eDisco);
     }
     return eCasa;
 }
 
-function criarDisco(casa){evento.target.classList.add('casa')
+function criarDisco(casa, k){evento.target.classList.add('casa')
     const eDisco =  document.createElement('div');
     eDisco.dataset.posicao = k;
     eDisco.classList.add('disco');
-    eDisco.addEventListener('drapstart', comecaArrastar);
-    if(casa == 'p'){
+    eDisco.addEventListener('dragstart', comecaArrastar);
+    if(casa === 'p'){
        eDisco.classList.add('preto');
     }
     else{
